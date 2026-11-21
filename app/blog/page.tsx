@@ -1,25 +1,52 @@
 import type { Metadata } from 'next';
+import { permanentRedirect } from 'next/navigation';
 import BlogGridSection from '@/app/blog/_components/blog-grid-section';
 import PageHeroSection from '@/components/sections/page-hero-section';
 import CtaSection from '@/components/sections/cta-section';
 import PrimaryButton from '@/components/buttons/primary-button';
 import SecondaryButton from '@/components/buttons/secondary-button';
 import { signUpUrl } from '@/lib/auth-urls';
+import {
+  BLOG_LIST_CANONICAL_PATH,
+  resolveBlogListPage,
+} from '@/lib/blog-list-pagination';
 import { formatBlogLastUpdated, getBlogs } from '@/lib/blogs';
 
-export const metadata: Metadata = {
-  title: 'Blog | TrendEvo',
-  description:
-    'Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates.',
-};
+const BLOG_LIST_DESCRIPTION =
+  'Explore Trend Evo’s blog for the latest social media trends, digital marketing tips, and industry updates.';
 
 type BlogPageProps = {
   searchParams: Promise<{ page?: string }>;
 };
 
+export async function generateMetadata({
+  searchParams,
+}: BlogPageProps): Promise<Metadata> {
+  const { page: pageParam } = await searchParams;
+  const resolved = resolveBlogListPage(pageParam);
+  const listPage = resolved === 'redirect' ? 1 : resolved;
+
+  const title =
+    listPage > 1 ? `Blog — Page ${listPage} | TrendEvo` : 'Blog | TrendEvo';
+
+  return {
+    title,
+    description: BLOG_LIST_DESCRIPTION,
+    alternates: {
+      canonical: BLOG_LIST_CANONICAL_PATH,
+    },
+  };
+}
+
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const { page: pageParam } = await searchParams;
-  const currentPage = Math.max(1, Number(pageParam) || 1);
+  const resolved = resolveBlogListPage(pageParam);
+
+  if (resolved === 'redirect') {
+    permanentRedirect(BLOG_LIST_CANONICAL_PATH);
+  }
+
+  const currentPage = resolved;
   const { posts, currentPage: activePage, totalPages, latestPublishedAt } =
     await getBlogs(currentPage, 25);
 

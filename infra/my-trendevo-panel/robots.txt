@@ -1,0 +1,6 @@
+# Target robots.txt for https://my.trendevo.com/
+# Apply in Perfect Panel admin (SEO / robots settings) or at the CDN/nginx layer.
+# Do not reference a sitemap — the panel should not expose sitemap.xml for indexing.
+
+User-agent: *
+Disallow: /

@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import PrimarySection from '@/components/sections/primary-section';
+import { blogListPageHref } from '@/lib/blog-list-pagination';
 import { cn } from '@/lib/utils';
 import BlogPostCard, { type BlogPost } from './blog-post-card';
 
@@ -37,7 +38,7 @@ export default function BlogGridSection({
         >
           {hasPrevPage ? (
             <Link
-              href={`/blog?page=${currentPage - 1}`}
+              href={blogListPageHref(currentPage - 1)}
               className="inline-flex h-10 items-center gap-1.5 rounded-lg border border-[#a6aab5] px-4 text-sm font-medium text-[#5a5a5a] dark:border-white/40 dark:bg-[#1c0926] dark:text-[#ebecef]"
             >
               <ArrowLeft className="size-4" aria-hidden />
@@ -61,7 +62,7 @@ export default function BlogGridSection({
             return (
               <Link
                 key={page}
-                href={`/blog?page=${page}`}
+                href={blogListPageHref(page)}
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
                   'inline-flex size-10 items-center justify-center rounded-lg border border-[#a6aab5] text-sm text-[#5a5a5a] dark:border-white/40 dark:bg-[#1c0926] dark:text-[#ebecef]',
@@ -76,7 +77,7 @@ export default function BlogGridSection({
 
           {hasNextPage ? (
             <Link
-              href={`/blog?page=${currentPage + 1}`}
+              href={blogListPageHref(currentPage + 1)}
               className="inline-flex h-10 items-center gap-1.5 rounded-lg border border-transparent bg-brand-gradient px-4 text-sm font-medium text-white dark:border-white/40"
             >
               Next

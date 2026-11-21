@@ -596,7 +596,7 @@ export const countryServiceContent: Record<
       </>
     ),
     subtitle:
-      'Explore TrendEvo services built for Vietnamese businesses and creators. Grow faster on Facebook, Instagram, TikTok, YouTube, and more with reliable delivery and local support.',
+      'Explore TrendEvo services built for Vietnamese businesses and creators. Grow faster on Facebook, Instagram, TikTok, YouTube, and more with reliable delivery and lnk<local support|/smm-panel-vietnam>.',
     titleClassName: 'text-2xl sm:text-[28px] lg:text-[36px]',
     subtitleClassName: 'text-sm sm:text-base md:text-lg',
     defaultPlatformId: 'facebook',
@@ -866,7 +866,7 @@ export const countryServiceContent: Record<
       </>
     ),
     subtitle:
-      'Explore TrendEvo services built for Thai businesses and creators. Grow faster on Facebook, Instagram, TikTok, YouTube, and more with reliable delivery and local support.',
+      'Explore lnk<TrendEvo|/about-us> services built for Thai businesses and creators. Grow faster on Facebook, Instagram, TikTok, YouTube, and more with reliable delivery and local support.',
     titleClassName: 'text-2xl sm:text-[28px] lg:text-[36px]',
     subtitleClassName: 'text-sm sm:text-base md:text-lg',
     defaultPlatformId: 'facebook',
@@ -2216,7 +2216,7 @@ export const countryServiceContent: Record<
       </>
     ),
     subtitle:
-      'Explore TrendEvo services built for Indian businesses and creators. Grow faster on Facebook, Instagram, TikTok, YouTube, and more with reliable delivery and local support.',
+      'Explore lnk<TrendEvo|/about-us> services built for Indian businesses and creators. Grow faster on Facebook, Instagram, TikTok, YouTube, and more with reliable delivery and local support.',
     titleClassName: 'text-2xl sm:text-[28px] lg:text-[36px]',
     subtitleClassName: 'text-sm sm:text-base md:text-lg',
     defaultPlatformId: 'facebook',

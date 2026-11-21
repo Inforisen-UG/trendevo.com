@@ -251,7 +251,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
       </>
     ),
     subtitle:
-      'We provide SMM services on almost every social media platform for Vietnamese businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
+      'We provide lnk<SMM services|/services> on almost every social media platform for Vietnamese businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
     underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
@@ -331,7 +331,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
       </>
     ),
     subtitle:
-      'We provide SMM services on almost every social media platform for Thai businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
+      'We provide lnk<SMM services|/services> on almost every social media platform for Thai businesses and creators. We have everything you would need to increase engagement. Check out our range of services. Choose the one you need!',
     underlineSrc: '/images/advantages/who-uses-trendevo-section-underline.svg',
     underlineWidth: 150,
     titleClassName:
@@ -362,7 +362,7 @@ export const advantagesContent: Record<AdvantagesSlug, AdvantagesContent> = {
           </>
         ),
         description:
-          'SMM reseller support lets entrepreneurs, agencies, and freelancers in Thailand grow fast without building from scratch. Deliver ready-made services under your brand, customize packages, and scale confidently while maintaining quality and boosting revenue.',
+          'lnk<SMM reseller support|/api> lets entrepreneurs, agencies, and freelancers in Thailand grow fast without building from scratch. Deliver ready-made services under your brand, customize packages, and scale confidently while maintaining quality and boosting revenue.',
       },
     ],
     rightAdvantages: [

@@ -88,7 +88,7 @@ export const data: SmmPanelindonesiaPageData = {
     label: 'FAQ',
     title: 'Frequently Asked gt<Questions> for Indonesia',
     subtitle:
-      'Find quick answers about TrendEvo SMM panel services in Indonesia — delivery, payments, safety, and support.',
+      'Find helpful answers about TrendEvo SMM panel services in Indonesia, including payment options, order delivery, account safety, and service details. For further assistance, you can lnk<contact our support team|/contact-us>.',
     bg: 'section-7',
     items: smmPanelindonesiaFaqItems,
   },

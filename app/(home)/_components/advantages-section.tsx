@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import PrimaryCard from '@/components/cards/primary-card';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 import PrimarySection from '@/components/sections/primary-section';
 import SectionHeading from '@/components/ui/section-heading';
 import {
@@ -38,7 +39,7 @@ function AdvantageCard({
           </h3>
         </div>
         <div className="text-xs font-medium leading-normal text-[#343e56] sm:text-sm dark:text-[#ebecef]">
-          {description}
+          {typeof description === 'string' ? renderText(description) : description}
         </div>
       </div>
     </PrimaryCard>

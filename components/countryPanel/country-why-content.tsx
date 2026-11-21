@@ -208,7 +208,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
       </>
     ),
     subtitle:
-      'Get high-quality engagement, instant delivery, and trusted performance for your brand. Grow faster with smart, affordable solutions designed for the Pakistani market.',
+      'lnk<TrendEvo|/about-us> helps Pakistani businesses, content creators, and digital marketers manage their social media growth with less effort. Our lnk<SMM panel|/services> brings together affordable services, straightforward ordering, and convenient order tracking. From growing your online presence to managing multiple campaigns, TrendEvo offers practical solutions for your marketing needs.',
     underlineSrc: '/images/country/uk/uk-section-underline-2.svg',
     underlineWidth: 190,
     titleClassName:
@@ -265,7 +265,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
       </>
     ),
     subtitle:
-      'Get high-quality engagement, instant delivery, and trusted performance for your brand. Grow faster with smart, affordable solutions designed for the Nigerian market.',
+      'lnk<TrendEvo|/about-us> offers a reliable and affordable lnk<SMM panel|/services> for businesses, creators, and marketers in Nigeria. With fast order processing, easy-to-use services, and flexible pricing, we help you improve your social media visibility and manage engagement with ease.',
     underlineSrc: '/images/country/uk/uk-section-underline-2.svg',
     underlineWidth: 190,
     titleClassName:
@@ -322,7 +322,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
       </>
     ),
     subtitle:
-      'Get high-quality engagement, instant delivery, and trusted performance for your brand. Grow faster with smart, affordable solutions designed for the Brazilian market.',
+      'lnk<TrendEvo|/about-us> makes social media marketing easier for Brazilian businesses, influencers, and agencies. Our lnk<SMM panel|/> provides access to a variety of social media services, competitive pricing, and a simple order management system. Whether you\'re managing a personal profile or promoting a business, you can choose services that match your marketing goals and budget.',
     underlineSrc: '/images/country/uk/uk-section-underline-2.svg',
     underlineWidth: 190,
     titleClassName:
@@ -379,7 +379,7 @@ export const countryWhyContent: Record<CountryWhySlug, CountryWhyContent> = {
       </>
     ),
     subtitle:
-      'Get high-quality engagement, instant delivery, and trusted performance for your brand. Grow faster with smart, affordable solutions designed for the Egyptian market.',
+      'lnk<TrendEvo|/about-us> offers an affordable and easy-to-use lnk<SMM panel|/> for businesses, creators, and marketers in Egypt. With flexible payment options, including supported international cards, fast order processing, and 24/7 support via WhatsApp and email, we make it easier to manage your social media orders and track your progress.',
     underlineSrc: '/images/country/uk/uk-section-underline-2.svg',
     underlineWidth: 190,
     titleClassName:

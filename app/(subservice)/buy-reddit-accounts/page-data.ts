@@ -294,7 +294,7 @@ export const data: RedditAccountPageData = {
     label: 'FAQ',
     title: 'gt<Frequently> Asked Questions',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find answers to common questions about our SMM panel services, payment methods, order processing, and account management. If you need further assistance, feel free to lnk<contact our support team|/contact-us>.',
     bg: 'section-7',
     items: [
       {

@@ -102,7 +102,7 @@ export const data: ThreadsFollowersPageData = {
     underlineWidth: 216,
     title: 'How to Buy Threads Followers gt<on TrendEvo>',
     subtitle:
-      'A Threads SMM panel helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
+      'A Threads lnk<SMM panel|/> helps businesses grow followers, likes, and engagement quickly and efficiently, saving time and boosting online presence.',
     titleClassName:
       'max-w-[1064px] whitespace-normal text-2xl tracking-[0.36px] sm:text-[32px] md:text-[36px]',
     subtitleClassName: 'max-w-[1064px] text-base sm:text-lg',
@@ -294,7 +294,7 @@ export const data: ThreadsFollowersPageData = {
     label: 'FAQ',
     title: 'gt<Frequently> Asked Questions',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear and simple explanations to the most common questions about our lnk<smm panel services|/services>, payments, orders, and account management.',
     bg: 'section-7',
     items: [
       {

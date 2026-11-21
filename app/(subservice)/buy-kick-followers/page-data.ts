@@ -294,7 +294,7 @@ export const data: KickFollowersPageData = {
     label: 'FAQ',
     title: 'gt<Frequently> Asked Questions',
     subtitle:
-      'Find clear and simple explanations to the most common questions about our services, payments, orders, and account management.',
+      'Find clear answers to common questions about lnk<our services|/services>, payment methods, order tracking, and account management. For additional help, you can lnk<contact us|/contact-us>.',
     bg: 'section-7',
     items: [
       {

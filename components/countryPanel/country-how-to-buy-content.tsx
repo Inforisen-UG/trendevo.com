@@ -400,7 +400,7 @@ export const countryHowToBuyContent: Record<
       {
         title: 'Sign Up for Free',
         description:
-          'Create your free account in seconds and unlock full access to our SMM panel built for Indian businesses, creators, and resellers.',
+          'lnk<Create your free account|signup> in seconds and unlock full access to our SMM panel built for Indian businesses, creators, and resellers.',
       },
       {
         title: 'Add funds',

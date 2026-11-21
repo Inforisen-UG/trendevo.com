@@ -1,4 +1,7 @@
+import Link from 'next/link';
 import type { ReactNode } from 'react';
+
+import { inlineLinkClassName } from '@/lib/utils/renderText';
 
 export type CountryHeroIllustration = {
   src: string;
@@ -90,11 +93,13 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     description: (
       <>
         Fast, reliable, and affordable{' '}
-        <span className="text-gradient">SMM services</span> to grow your social
-        media presence in Thailand. From Facebook and Instagram to TikTok and
-        YouTube, TrendEvo helps Thai businesses and creators achieve real
-        results. We provide trusted solutions and support to simplify social
-        media marketing and boost growth.
+        <Link href="/services" className={inlineLinkClassName}>
+          SMM services
+        </Link>{' '}
+        to grow your social media presence in Thailand. From Facebook and
+        Instagram to TikTok and YouTube, TrendEvo helps Thai businesses and
+        creators achieve real results. We provide trusted solutions and support
+        to simplify social media marketing and boost growth.
       </>
     ),
     signInLabel: 'Sign In',
@@ -234,12 +239,14 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     ),
     description: (
       <>
-        Fast, reliable, and affordable{' '}
-        <span className="text-gradient">SMM services</span> to grow your social
-        media presence in India. From Facebook and Instagram to TikTok and
-        YouTube, TrendEvo helps Indian businesses and creators achieve real
-        results. We provide trusted solutions and support to simplify social
-        media marketing and boost growth.
+        Fast, reliable, and{' '}
+        <Link href="/services" className={inlineLinkClassName}>
+          affordable SMM services
+        </Link>{' '}
+        to grow your social media presence in India. From Facebook and Instagram
+        to TikTok and YouTube, TrendEvo helps Indian businesses and creators
+        achieve real results. We provide trusted solutions and support to simplify
+        social media marketing and boost growth.
       </>
     ),
     signInLabel: 'Sign In',
@@ -263,12 +270,14 @@ export const countryHeroContent: Record<CountryHeroSlug, CountryHeroContent> = {
     ),
     description: (
       <>
-        Fast, reliable, and affordable{' '}
-        <span className="text-gradient">SMM services</span> to grow your social
-        media presence in Indonesia. From Facebook and Instagram to TikTok and
-        YouTube, TrendEvo helps Indonesian businesses and creators achieve real
-        results. We provide trusted solutions and support to simplify social
-        media marketing and boost growth.
+        Fast, reliable, and{' '}
+        <Link href="/services" className={inlineLinkClassName}>
+          affordable SMM services
+        </Link>{' '}
+        to grow your social media presence in Indonesia. From Facebook and
+        Instagram to TikTok and YouTube, TrendEvo helps Indonesian businesses
+        and creators achieve real results. We provide trusted solutions and
+        support to simplify social media marketing and boost growth.
       </>
     ),
     signInLabel: 'Sign In',

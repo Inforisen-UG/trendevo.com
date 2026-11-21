@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/accordion';
 import SectionHeading from '@/components/ui/section-heading';
 import { cn } from '@/lib/utils';
+import { renderText } from '@/lib/utils/renderText';
 import { Accordion as AccordionPrimitive } from 'radix-ui';
 
 import {
@@ -116,7 +117,7 @@ function HowToBuyStepsAccordion({
             />
             {step.description ? (
               <AccordionContent className="px-3 pb-6 pt-0 text-sm font-medium leading-normal text-[#f7f2f2] data-closed:hidden">
-                {step.description}
+                {renderText(step.description)}
               </AccordionContent>
             ) : null}
           </AccordionItem>

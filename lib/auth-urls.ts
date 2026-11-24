@@ -1,9 +1,7 @@
 import { DEFAULT_API_DOCS_URL } from '@/lib/api-docs-url';
-import { getSiteUrl } from '@/lib/site-url';
+import { getPerfectAppUrl, getSiteUrl } from '@/lib/site-url';
 
-const perfectAppBaseUrl =
-  process.env.NEXT_PUBLIC_PERFECT_APP_URL?.replace(/\/$/, '') ||
-  'https://my.trendevo.com';
+const perfectAppBaseUrl = getPerfectAppUrl();
 
 function getPublicApiDocsUrl() {
   const siteUrl = getSiteUrl();

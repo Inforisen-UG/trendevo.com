@@ -24,3 +24,16 @@ export function absoluteUrl(path = '/'): string {
   if (!path || path === '/') return base;
   return `${base}${path.startsWith('/') ? path : `/${path}`}`;
 }
+
+/** Perfect Panel / customer app origin (e.g. https://my.trendevo.com). */
+export function getPerfectAppUrl(): string {
+  return (
+    process.env.NEXT_PUBLIC_PERFECT_APP_URL?.trim().replace(/\/$/, '') ||
+    'https://my.trendevo.com'
+  );
+}
+
+export function perfectAppAdminUrl(pathname: string, search = ''): string {
+  const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
+  return `${getPerfectAppUrl()}${path}${search}`;
+}

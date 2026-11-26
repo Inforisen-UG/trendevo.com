@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { createSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as soundcloudFollowersPageData } from '@/app/(subservice)/buy-soundcloud-followers/page-data';
 import SoundcloudFollowersCtaSection from './_components/cta-section';
 import SoundcloudFollowersHeroSection from './_components/hero-section';
@@ -26,6 +28,9 @@ export default function SoundcloudFollowersPage() {
       <SoundcloudFollowersWhyChooseSection />
       <SoundcloudFollowersWhoShouldBuySection />
       <SoundcloudFollowersWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={createSubserviceTestimonials('SoundCloud Followers gt<Reviews>')}
+      />
       <SoundcloudFollowersThingsToKnowSection />
       <FaqSection data={soundcloudFollowersPageData.faq} />
       <SoundcloudFollowersRelatedServicesSection />

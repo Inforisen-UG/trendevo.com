@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as redditUpvotesPageData } from '@/app/(subservice)/buy-reddit-upvotes/page-data';
 import RedditUpvotesCtaSection from '@/app/(subservice)/buy-reddit-upvotes/_components/cta-section';
 import RedditUpvotesHeroSection from '@/app/(subservice)/buy-reddit-upvotes/_components/hero-section';
@@ -18,8 +19,10 @@ export default function RedditUpvotesPage() {
     <>
       <RedditUpvotesHeroSection />
       <RedditUpvotesOrderFormSection />
-      <TestimonialsSection data={redditUpvotesPageData.testimonials} />
       <RedditUpvotesWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(redditUpvotesPageData.testimonials)}
+      />
       {redditUpvotesPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

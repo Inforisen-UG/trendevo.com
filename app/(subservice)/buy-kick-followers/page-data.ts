@@ -137,6 +137,7 @@ export const data: KickFollowersPageData = {
   serviceLeadingSlugs: ['kick-followers', 'kick-followers-related-services'],
 
   testimonials: {
+    sectionDarkBg: 'section-testimonials-dark',
     sectionBackground:
       'linear-gradient(64.26deg, rgb(241, 219, 255) 3.62%, rgb(255, 255, 255) 28.7%, rgb(255, 242, 251) 53.08%, rgb(255, 255, 255) 73.06%, rgb(250, 232, 255) 98.62%)',
     badge: 'TESTIMONIALS',

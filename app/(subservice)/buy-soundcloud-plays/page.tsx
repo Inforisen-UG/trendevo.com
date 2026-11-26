@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { createSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as soundcloudPlaysPageData } from '@/app/(subservice)/buy-soundcloud-plays/page-data';
 import SoundcloudPlaysCtaSection from './_components/cta-section';
 import SoundcloudPlaysHeroSection from './_components/hero-section';
@@ -26,6 +28,9 @@ export default function SoundcloudPlaysPage() {
       <SoundcloudPlaysWhyChooseSection />
       <SoundcloudPlaysWhoShouldBuySection />
       <SoundcloudPlaysWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={createSubserviceTestimonials('SoundCloud Plays gt<Reviews>')}
+      />
       <SoundcloudPlaysThingsToKnowSection />
       <FaqSection data={soundcloudPlaysPageData.faq} />
       <SoundcloudPlaysRelatedServicesSection />

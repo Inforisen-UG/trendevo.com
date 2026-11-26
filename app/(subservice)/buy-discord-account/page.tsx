@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as discordAccountPageData } from '@/app/(subservice)/buy-discord-account/page-data';
 import DiscordAccountCtaSection from '@/app/(subservice)/buy-discord-account/_components/cta-section';
 import DiscordAccountHeroSection from '@/app/(subservice)/buy-discord-account/_components/hero-section';
@@ -18,8 +19,10 @@ export default function DiscordAccountPage() {
     <>
       <DiscordAccountHeroSection />
       <DiscordAccountOrderFormSection />
-      <TestimonialsSection data={discordAccountPageData.testimonials} />
       <DiscordAccountWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(discordAccountPageData.testimonials)}
+      />
       {discordAccountPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

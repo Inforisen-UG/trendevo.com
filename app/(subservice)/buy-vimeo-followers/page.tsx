@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as vimeoFollowersPageData } from '@/app/(subservice)/buy-vimeo-followers/page-data';
 import VimeoFollowersCtaSection from '@/app/(subservice)/buy-vimeo-followers/_components/cta-section';
 import VimeoFollowersHeroSection from '@/app/(subservice)/buy-vimeo-followers/_components/hero-section';
@@ -18,8 +19,10 @@ export default function VimeoFollowersPage() {
     <>
       <VimeoFollowersHeroSection />
       <VimeoFollowersOrderFormSection />
-      <TestimonialsSection data={vimeoFollowersPageData.testimonials} />
       <VimeoFollowersWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(vimeoFollowersPageData.testimonials)}
+      />
       {vimeoFollowersPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

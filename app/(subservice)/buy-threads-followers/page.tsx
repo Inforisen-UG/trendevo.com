@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as threadsFollowersPageData } from '@/app/(subservice)/buy-threads-followers/page-data';
 import ThreadsFollowersCtaSection from '@/app/(subservice)/buy-threads-followers/_components/cta-section';
 import ThreadsFollowersHeroSection from '@/app/(subservice)/buy-threads-followers/_components/hero-section';
@@ -18,8 +19,10 @@ export default function ThreadsFollowersPage() {
     <>
       <ThreadsFollowersHeroSection />
       <ThreadsFollowersOrderFormSection />
-      <TestimonialsSection data={threadsFollowersPageData.testimonials} />
       <ThreadsFollowersWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(threadsFollowersPageData.testimonials)}
+      />
       {threadsFollowersPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

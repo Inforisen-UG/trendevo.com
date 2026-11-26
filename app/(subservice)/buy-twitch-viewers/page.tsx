@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as twitchViewersPageData } from '@/app/(subservice)/buy-twitch-viewers/page-data';
 import TwitchViewersCtaSection from '@/app/(subservice)/buy-twitch-viewers/_components/cta-section';
 import TwitchViewersHeroSection from '@/app/(subservice)/buy-twitch-viewers/_components/hero-section';
@@ -18,8 +19,10 @@ export default function TwitchViewersPage() {
     <>
       <TwitchViewersHeroSection />
       <TwitchViewersOrderFormSection />
-      <TestimonialsSection data={twitchViewersPageData.testimonials} />
       <TwitchViewersWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(twitchViewersPageData.testimonials)}
+      />
       {twitchViewersPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

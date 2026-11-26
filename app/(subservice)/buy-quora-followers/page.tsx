@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as quoraFollowersPageData } from '@/app/(subservice)/buy-quora-followers/page-data';
 import QuoraFollowersCtaSection from '@/app/(subservice)/buy-quora-followers/_components/cta-section';
 import QuoraFollowersHeroSection from '@/app/(subservice)/buy-quora-followers/_components/hero-section';
@@ -18,8 +19,10 @@ export default function QuoraFollowersPage() {
     <>
       <QuoraFollowersHeroSection />
       <QuoraFollowersOrderFormSection />
-      <TestimonialsSection data={quoraFollowersPageData.testimonials} />
       <QuoraFollowersWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(quoraFollowersPageData.testimonials)}
+      />
       {quoraFollowersPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

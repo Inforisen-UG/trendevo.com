@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FaqSection from '@/components/sections/faq-section';
 import ServiceLeading from '@/components/sections/service-leading';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
+import { alignSubserviceTestimonials } from '@/lib/subservice-testimonials';
 import { data as kickFollowersPageData } from '@/app/(subservice)/buy-kick-followers/page-data';
 import KickFollowersCtaSection from '@/app/(subservice)/buy-kick-followers/_components/cta-section';
 import KickFollowersHeroSection from '@/app/(subservice)/buy-kick-followers/_components/hero-section';
@@ -18,8 +19,10 @@ export default function KickFollowersPage() {
     <>
       <KickFollowersHeroSection />
       <KickFollowersOrderFormSection />
-      <TestimonialsSection data={kickFollowersPageData.testimonials} />
       <KickFollowersWorkingProcessSection />
+      <FetchedTestimonialsSection
+        data={alignSubserviceTestimonials(kickFollowersPageData.testimonials)}
+      />
       {kickFollowersPageData.serviceLeadingSlugs.map((slug) => (
         <ServiceLeading key={slug} slug={slug} />
       ))}

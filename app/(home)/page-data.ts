@@ -1,5 +1,5 @@
 import type { FaqSectionData } from '@/components/sections/faq-section';
-import type { TestimonialsSectionData } from '@/components/sections/testimonials-section';
+import type { TestimonialsSectionShell } from '@/components/sections/testimonials-section';
 
 import type { SectionBgKey } from '@/components/sections/primary-section';
 
@@ -123,7 +123,7 @@ type HomePricingPlatform = {
   plans: HomePricingPlan[];
 };
 
-type HomeTestimonialsData = TestimonialsSectionData;
+type HomeTestimonialsData = TestimonialsSectionShell;
 
 type HomePageData = {
   seo: SEO;
@@ -974,51 +974,6 @@ export const data: HomePageData = {
       quoteCloseSrc: '/images/testimonials/testimonials-quote-mark.svg',
       playIconSrc: '/images/testimonials/testimonials-video-play-icon.svg',
       playOrbSrc: '/images/testimonials/testimonials-video-play-orb.webp',
-    },
-    leftTextReviews: [
-      {
-        id: 'left-1',
-        name: 'Ariyan Khan',
-        role: 'Ecommerce Business Owner',
-        avatar: '/images/testimonials/testimonials-ariyan-khan-avatar.png',
-        quote:
-          'TrendEvo made SMM orders much easier for my online shop. I can add funds with bKash, choose the service, and track everything from the dashboard.',
-      },
-      {
-        id: 'left-2',
-        name: 'Farhana Islam',
-        role: 'Content Creator',
-        avatar: '/images/testimonials/testimonials-rafi-islam-avatar.png',
-        quote:
-          'I use TrendEvo for YouTube and TikTok campaigns. The local payment options and support make the process easier than many foreign SMM panels.',
-      },
-    ],
-    rightTextReviews: [
-      {
-        id: 'right-1',
-        name: 'Seam Rahman',
-        role: 'Digital Marketing Agency Owner',
-        avatar: '/images/testimonials/testimonials-seam-rahman-avatar.png',
-        quote:
-          'The dashboard is simple and the pricing works well for Bangladesh clients. It is useful when we manage multiple campaigns for different pages.',
-      },
-      {
-        id: 'right-2',
-        name: 'Samira Ahmed',
-        role: 'Performance Marketer',
-        avatar:
-          '/images/testimonials/testimonials-samira-ahmed-avatar.png',
-        quote:
-          'Refill packages and order tracking save our team time when we run campaigns for multiple clients. Support replies quickly when we need help.',
-      },
-    ],
-    featuredReview: {
-      name: 'Amelia Rose',
-      role: 'SMM Freelancer',
-      avatar: '/images/testimonials/testimonials-featured-review-photo.webp',
-      image: '/images/testimonials/testimonials-featured-review-photo.webp',
-      quote:
-        'As a freelancer, I need fast delivery and clear order status for client work. TrendEvo helps me manage Facebook and Instagram orders without wasting time.',
     },
     videoReviews: [],
     defaultTab: 'customer',

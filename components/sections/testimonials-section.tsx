@@ -82,6 +82,11 @@ export type TestimonialsSectionData = {
   className?: string;
 };
 
+export type TestimonialsSectionShell = Omit<
+  TestimonialsSectionData,
+  'leftTextReviews' | 'rightTextReviews' | 'featuredReview'
+>;
+
 export type TestimonialsSectionProps = {
   data: TestimonialsSectionData;
 };

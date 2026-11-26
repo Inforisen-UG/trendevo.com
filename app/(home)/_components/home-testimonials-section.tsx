@@ -1,5 +1,5 @@
 import { data as homePageData } from '@/app/(home)/page-data';
-import TestimonialsSection from '@/components/sections/testimonials-section';
+import FetchedTestimonialsSection from '@/components/sections/fetched-testimonials-section';
 import {
   formatTestimonialsUsersTitle,
   getStats,
@@ -9,7 +9,7 @@ export default async function HomeTestimonialsSection() {
   const { usersAll } = await getStats();
 
   return (
-    <TestimonialsSection
+    <FetchedTestimonialsSection
       data={{
         ...homePageData.testimonials,
         title: formatTestimonialsUsersTitle(usersAll),
